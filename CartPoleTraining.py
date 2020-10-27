@@ -70,7 +70,7 @@ class Agent:
             else:
                 target[i][batch[i][1]] = batch[i][2] + self.discount * (np.amax(target_next[i]))
 
-        self.model.fit(current_state, target, verbose=0)
+        self.model.fit(current_state, target)
 
     def select_action(self, state):
         if np.random.rand() < self.epsilon:
