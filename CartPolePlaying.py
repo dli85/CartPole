@@ -3,8 +3,8 @@ import gym
 import numpy as np
 
 if __name__ == '__main__':
-    mod_name = input("What is the name of your model(Should end with .h5): ")
-    model = tf.keras.models.load_model(mod_name)
+    name = input("What is the name of your model(Should end with .h5): ")
+    model = tf.keras.models.load_model(name)
     trials = int(input("How many games would you like to run: "))
 
     env = gym.make('CartPole-v1')
